@@ -26,7 +26,9 @@ export default function InputGroup() {
             type="number"
             required
             value={userInput.initialInvestment}
-            onChange={handleChangeInitialInvestment}
+            onChange={(event) =>
+              handleChange('initialInvestment', event.target.value)
+            }
           />
         </p>
         <p>
@@ -35,7 +37,9 @@ export default function InputGroup() {
             type="number"
             required
             value={userInput.annualInvestment}
-            onChange={handleAnnualInvestment}
+            onChange={(event) =>
+              handleChange('annualInvestment', event.target.value)
+            }
           />
         </p>
       </div>
@@ -46,7 +50,9 @@ export default function InputGroup() {
             type="number"
             required
             value={userInput.expectedReturn}
-            onChange={handleExpectedReturn}
+            onChange={(event) =>
+              handleChange('expectedReturn', event.target.value)
+            }
           />
         </p>
         <p>
@@ -55,7 +61,7 @@ export default function InputGroup() {
             type="number"
             required
             value={userInput.duration}
-            onChange={handleDuration}
+            onChange={(event) => handleChange('duration', event.target.value)}
           />
         </p>
       </div>
